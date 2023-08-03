@@ -51,6 +51,7 @@ jobs:
         id: deployment
         with:
           step: start
+          debug: true
           token: ${{ secrets.GITHUB_TOKEN }}
           env: release
           desc: "depl_id: ${{ github.event.deployment.id }}, ref_id: ${{ github.head_ref }}"
