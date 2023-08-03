@@ -31,5 +31,5 @@ LABEL maintainer="ivan.kuchin@gmail.com"
 LABEL org.opencontainers.image.source="https://github.com/IvanKuchin/${BUILD_REPO}"
 
 COPY --from=builder /app /app
-EXPOSE 80
+EXPOSE 1025
 CMD ["/app"]
