@@ -24,8 +24,8 @@ func Run() {
 	r := mux.NewRouter()
 	// r.Use(loggingMiddleware)
 	// test it like this: curl.exe -X POST http://localhost/api/v1/register -d '{\"domain\":\"www.bestbounty.ru\"}' -v
-	r.HandleFunc("/api/v1/domains", api_handlers.GetDomain).Methods(http.MethodGet)
-	r.HandleFunc("/api/v1/domains", api_handlers.SetDomain).Methods(http.MethodPost)
+	r.HandleFunc("/api/v1/domain", api_handlers.GetDomain).Methods(http.MethodGet)
+	r.HandleFunc("/api/v1/domain", api_handlers.SetDomain).Methods(http.MethodPost)
 
 	srv := &http.Server{
 		Addr:         "0.0.0.0:" + strconv.Itoa(1025),
